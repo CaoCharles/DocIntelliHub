@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import DMSDashboard from './pages/DMSDashboard'
 import DocumentSubmission from './pages/DocumentSubmission'
@@ -14,7 +14,7 @@ import './index.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="/dms" replace />} />
@@ -33,7 +33,7 @@ function App() {
           <Route path="help" element={<HelpSupport />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
